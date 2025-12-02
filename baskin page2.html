@@ -3,39 +3,170 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Baskin Robbins   Flavours</title>
-</head>
-<style>
-.wrap {
-  max-width: 1200px;
-  margin: 0 auto;  
-  padding: 20px;
-}
-.card {
-  width: 250px;
-  background: #fff;
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  text-align: center;
-}
+  <title>Baskin Robbins - Flavours</title>
 
-.card img {
-  width: 100%;
-  height: 200px;
-  object-fit: contain;
-}
-</style>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f8f8f8;
+      color: #333;
+    }
+
+    .wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* HEADER */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 0;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo {
+      background: #ff4d88;
+      color: #fff;
+      font-size: 22px;
+      font-weight: bold;
+      padding: 8px 14px;
+      border-radius: 50%;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      margin-left: 20px;
+      font-size: 16px;
+      font-weight: 600;
+      transition: .3s;
+    }
+
+    nav a:hover,
+    nav .cta {
+      color: #ff4d88;
+    }
+
+    /* SECTION */
+    .section {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .section h3 {
+      font-size: 28px;
+      margin-bottom: 25px;
+    }
+
+    .grid {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .card {
+      background: #fff;
+      padding: 15px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+      transition: .3s;
+      text-align: center;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: contain;
+      margin-bottom: 12px;
+    }
+
+    .price-row {
+      margin-top: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .price-row span {
+      font-size: 20px;
+      font-weight: bold;
+      color: #000;
+    }
+
+    .btn {
+      padding: 7px 14px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: .3s;
+    }
+
+    .btn.primary {
+      background: #ff4d88;
+      color: #fff;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      padding: 15px 0;
+      background: #fff;
+      font-size: 14px;
+      color: #444;
+      border-radius: 10px;
+    }
+
+    /* Responsive nav for mobile */
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      nav a {
+        margin: 0 10px;
+        font-size: 14px;
+      }
+    }
+
+  </style>
+</head>
+
 <body>
   <div class="wrap">
+
     <header>
       <div class="brand">
         <div class="logo">BR</div>
         <h1>Baskin Robbins</h1>
       </div>
+
       <nav>
-        <a href="index.html">Home</a>
-        <a href="page2.html" class="cta">Flavors</a>
+        <a href="#">Home</a>
+        <a href="#" class="cta">Flavors</a>
         <a href="#">Menu</a>
         <a href="#">Contact</a>
       </nav>
@@ -43,11 +174,13 @@
 
     <section class="section">
       <h3>Our Signature Flavors</h3>
+
       <div class="grid">
+
         <div class="card">
-          <img src="https://baskinrobbinsindia.com/cdn/shop/files/Hazelnut_f0d9c0ff-31a7-43e7-9617-540c0e1db616_414x@2x.png?v=1747050696" alt="Flavor" />
+          <img src="https://baskinrobbinsindia.com/cdn/shop/files/Hazelnut_f0d9c0ff-31a7-43e7-9617-540c0e1db616_414x@2x.png?v=1747050696">
           <h4>Chocolate Flavour</h4>
-          <p>Chocolate and Roasted Hazelnut.</p>
+          <p>Chocolate & roasted hazelnut blend.</p>
           <div class="price-row">
             <span>₹120</span>
             <button class="btn primary">Buy</button>
@@ -55,9 +188,9 @@
         </div>
 
         <div class="card">
-          <img src="https://baskinrobbinsindia.com/cdn/shop/files/princess_414x@2x.png?v=1747050696" alt="Flavor" />
+          <img src="https://baskinrobbinsindia.com/cdn/shop/files/princess_414x@2x.png?v=1747050696">
           <h4>Strawberry Sundae</h4>
-          <p>Fresh strawberry pieces blended into silky cream.</p>
+          <p>Fresh strawberry pieces in creamy texture.</p>
           <div class="price-row">
             <span>₹110</span>
             <button class="btn primary">Buy</button>
@@ -65,9 +198,9 @@
         </div>
 
         <div class="card">
-          <img src="https://baskinrobbinsindia.com/cdn/shop/files/bluebeery_414x@2x.png?v=1747050696" alt="Flavor" />
+          <img src="https://baskinrobbinsindia.com/cdn/shop/files/bluebeery_414x@2x.png?v=1747050696">
           <h4>Blueberry Classic</h4>
-          <p>Berryme In Cheesecake.</p>
+          <p>Cheesecake swirls with berry punch.</p>
           <div class="price-row">
             <span>₹100</span>
             <button class="btn primary">Buy</button>
@@ -75,9 +208,9 @@
         </div>
 
         <div class="card">
-          <img src="https://baskinrobbinsindia.com/cdn/shop/files/Mango_Cream_414x@2x.png?v=1747050696" alt="Flavor" />
+          <img src="https://baskinrobbinsindia.com/cdn/shop/files/Mango_Cream_414x@2x.png?v=1747050696">
           <h4>Mango & Cream</h4>
-          <p>Seasonal mango puree infused with cream.</p>
+          <p>Fresh seasonal mango infused with cream.</p>
           <div class="price-row">
             <span>₹130</span>
             <button class="btn primary">Buy</button>
@@ -85,9 +218,9 @@
         </div>
 
         <div class="card">
-          <img src="https://baskinrobbinsindia.com/cdn/shop/files/SaltedCaramel_414x@2x.png?v=1747050696" alt="Flavor" />
-          <h4>Salted Caramel & Brownie </h4>
-          <p>Crunchy caramel bits in smooth caramel ice cream.</p>
+          <img src="https://baskinrobbinsindia.com/cdn/shop/files/SaltedCaramel_414x@2x.png?v=1747050696">
+          <h4>Salted Caramel & Brownie</h4>
+          <p>Caramel ice cream with brownie chunks.</p>
           <div class="price-row">
             <span>₹140</span>
             <button class="btn primary">Buy</button>
@@ -95,22 +228,22 @@
         </div>
 
         <div class="card">
-          <img src="https://baskinrobbinsindia.com/cdn/shop/files/CottonCandy_414x@2x.png?v=1747050696" alt="Flavor" />
-          <h4>Contton Candy</h4>
-          <p>Cotton Candy Wonderland.</p>
+          <img src="https://baskinrobbinsindia.com/cdn/shop/files/CottonCandy_414x@2x.png?v=1747050696">
+          <h4>Cotton Candy</h4>
+          <p>Sweet cotton candy swirl delight.</p>
           <div class="price-row">
             <span>₹150</span>
             <button class="btn primary">Buy</button>
           </div>
         </div>
+
       </div>
     </section>
 
     <footer>
-      <div class="foot-inner">
-        <p class="muted">© 2025 Baskin Robbins Clone Project</p>
-      </div>
+      © 2025 Baskin Robbins Clone Project
     </footer>
+
   </div>
 </body>
 </html>

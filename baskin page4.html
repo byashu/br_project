@@ -3,10 +3,174 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Baskin Robbins   Contact & Locations</title>
+  <title>Baskin Robbins - Contact & Locations</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
+    }
+
+    body{
+      background:#f7f7f7;
+      color:#333;
+    }
+
+    .wrap{
+      max-width:1200px;
+      margin:0 auto;
+      padding:20px;
+    }
+
+    /* HEADER */
+    header{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:15px 0;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:10px;
+    }
+
+    .logo{
+      background:#ff4d88;
+      color:#fff;
+      font-size:20px;
+      padding:8px 14px;
+      border-radius:50%;
+      font-weight:bold;
+    }
+
+    nav a{
+      text-decoration:none;
+      margin-left:20px;
+      color:#333;
+      font-weight:600;
+      transition:.3s;
+    }
+
+    nav a:hover,
+    nav .cta{
+      color:#ff4d88;
+    }
+
+    /* SECTIONS */
+    .section{
+      margin-top:40px;
+      text-align:center;
+    }
+
+    .section h3{
+      font-size:28px;
+      margin-bottom:20px;
+    }
+
+    /* LOCATION CARDS */
+    .loc-wrapper{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
+      gap:20px;
+      margin-top:20px;
+    }
+
+    .loc-card{
+      background:#fff;
+      padding:20px;
+      border-radius:12px;
+      box-shadow:0 0 10px rgba(0,0,0,0.1);
+      text-align:left;
+      transition:.3s;
+    }
+
+    .loc-card:hover{
+      transform:translateY(-5px);
+    }
+
+    .muted{
+      color:#555;
+      font-size:15px;
+      margin-top:5px;
+    }
+
+    .loc-contact{
+      margin-left:5px;
+      font-size:14px;
+    }
+
+    /* CONTACT FORM */
+    form{
+      max-width:500px;
+      margin:0 auto;
+      background:#fff;
+      padding:25px;
+      border-radius:12px;
+      box-shadow:0 0 10px rgba(0,0,0,0.1);
+      margin-top:25px;
+      text-align:left;
+    }
+
+    form input,
+    form textarea{
+      width:100%;
+      padding:10px;
+      border:1px solid #ccc;
+      border-radius:6px;
+      font-size:15px;
+      margin-top:5px;
+    }
+
+    form button{
+      width:100%;
+      padding:12px;
+      font-size:16px;
+      border:none;
+      background:#ff4d88;
+      color:#fff;
+      margin-top:15px;
+      border-radius:6px;
+      cursor:pointer;
+      transition:.3s;
+    }
+
+    form button:hover{
+      background:#ff0066;
+    }
+
+    /* FOOTER */
+    footer{
+      text-align:center;
+      margin-top:40px;
+      padding:15px;
+      background:#fff;
+      border-radius:10px;
+      box-shadow:0 0 10px rgba(0,0,0,0.05);
+    }
+
+    /* MOBILE RESPONSIVE */
+    @media(max-width:600px){
+      header{
+        flex-direction:column;
+        gap:10px;
+      }
+
+      nav a{
+        margin:0 10px;
+        font-size:14px;
+      }
+    }
+  </style>
 </head>
+
 <body>
+
   <div class="wrap">
+
     <header>
       <div class="brand">
         <div class="logo">BR</div>
@@ -20,42 +184,50 @@
       </nav>
     </header>
 
+    <!-- LOCATIONS -->
     <section class="section">
       <h3>Our Locations</h3>
+
       <div class="loc-wrapper">
         <div class="loc-card">
           <strong>MG Road</strong>
           <div class="muted">Open • 10:00 — 22:00</div>
-          <div class="muted loc-contact">+91 90000 00000</div>
-          <div class="muted loc-contact">123 MG Road, City</div>
+          <div class="muted loc-contact">📞 +91 90000 00000</div>
+          <div class="muted loc-contact">📍 123 MG Road, City</div>
         </div>
+
         <div class="loc-card">
           <strong>City Mall</strong>
           <div class="muted">Open • 11:00 — 23:00</div>
-          <div class="muted loc-contact">+91 90000 00001</div>
-          <div class="muted loc-contact">456 City Mall, City</div>
+          <div class="muted loc-contact"> +91 90000 00001</div>
+          <div class="muted loc-contact"> 456 City Mall, Town</div>
         </div>
       </div>
     </section>
 
+    <!-- CONTACT FORM -->
     <section class="section">
       <h3>Contact Us</h3>
+
       <form>
-        <label for="name">Name:</label><br>
-        <input type="text" id="name" name="name" placeholder="Your Name" required><br><br>
-        <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email" placeholder="Your Email" required><br><br>
-        <label for="message">Message:</label><br>
-        <textarea id="message" name="message" placeholder="Your Message" rows="4" required></textarea><br><br>
-        <button class="btn primary" type="submit">Send Message</button>
+        <label>Name</label>
+        <input type="text" placeholder="Your Name" required>
+
+        <label style="margin-top:10px;">Email</label>
+        <input type="email" placeholder="Your Email" required>
+
+        <label style="margin-top:10px;">Message</label>
+        <textarea rows="4" placeholder="Your Message" required></textarea>
+
+        <button type="submit">Send Message</button>
       </form>
     </section>
 
     <footer>
-      <div class="foot-inner">
-        <p class="muted">© 2025 Baskin Robbins Clone Project</p>
-      </div>
+      © 2025 Baskin Robbins Clone Project
     </footer>
+
   </div>
+
 </body>
 </html>

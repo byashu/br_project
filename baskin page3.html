@@ -3,36 +3,142 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Baskin Robbins  Menu</title>
-</head>
-<style>
-.wrap {
-  max-width: 1200px;
-  margin: 0 auto;  
-  padding: 20px;
-}
-.card {
-  width: 250px;
-  background: #fff;
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  text-align: center;
-}
+  <title>Baskin Robbins - Menu</title>
 
-.card img {
-  width: 100%;
-  height: 200px;
-  object-fit: contain;
-}
-</style>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body{
+      background:#f7f7f7;
+      color:#333;
+    }
+
+    .wrap{
+      max-width:1200px;
+      margin:0 auto;
+      padding:20px;
+    }
+
+    /* HEADER */
+    header{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:15px 0;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:10px;
+    }
+
+    .logo{
+      background:#ff4d88;
+      color:#fff;
+      font-size:20px;
+      padding:8px 14px;
+      border-radius:50%;
+      font-weight:bold;
+    }
+
+    nav a{
+      text-decoration:none;
+      margin-left:20px;
+      color:#333;
+      font-weight:600;
+      transition:.3s;
+    }
+
+    nav a:hover,
+    nav .cta{
+      color:#ff4d88;
+    }
+
+    /* MENU SECTION */
+    .section{
+      text-align:center;
+      margin-top:40px;
+    }
+
+    .section h3{
+      font-size:28px;
+      margin-bottom:25px;
+    }
+
+    .features{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
+      gap:20px;
+      margin-top:20px;
+    }
+
+    .feature{
+      background:#fff;
+      padding:20px;
+      border-radius:12px;
+      box-shadow:0 0 10px rgba(0,0,0,0.1);
+      transition:.3s;
+    }
+
+    .feature:hover{
+      transform:translateY(-5px);
+    }
+
+    .feature img{
+      width:100%;
+      height:200px;
+      object-fit:contain;
+      margin:10px 0;
+    }
+
+    .muted{
+      color:#555;
+      font-size:15px;
+      line-height:1.5;
+    }
+
+    footer{
+      text-align:center;
+      margin-top:40px;
+      padding:15px;
+      background:#fff;
+      border-radius:10px;
+      font-size:14px;
+      box-shadow:0 0 10px rgba(0,0,0,0.05);
+    }
+
+    /* MOBILE RESPONSIVE */
+    @media(max-width:600px){
+      header{
+        flex-direction:column;
+        gap:10px;
+      }
+
+      nav a{
+        margin:0 10px;
+        font-size:14px;
+      }
+    }
+
+  </style>
+</head>
+
 <body>
+
   <div class="wrap">
+
     <header>
       <div class="brand">
         <div class="logo">BR</div>
         <h1>Baskin Robbins</h1>
       </div>
+
       <nav>
         <a href="index.html">Home</a>
         <a href="page2.html">Flavors</a>
@@ -43,35 +149,39 @@
 
     <section class="section">
       <h3>Menu Highlights</h3>
+
       <div class="features">
+
         <div class="feature">
           <strong>Sundaes</strong>
-          <img src="https://baskinrobbinsindia.com/cdn/shop/files/SaltedCaramel_414x@2x.png?v=1747050696" alt="Flavor" />
-          <p class="muted">Classic sundaes with a choice of sauces and toppings.</p>
+          <img src="https://baskinrobbinsindia.com/cdn/shop/files/SaltedCaramel_414x@2x.png?v=1747050696">
+          <p class="muted">Classic sundaes with delicious sauces & toppings.</p>
         </div>
+
         <div class="feature">
           <strong>Cakes & Party Packs</strong>
-          <img src="https://baskinrobbinsindia.com/cdn/shop/files/Cakes_08fe6ba3-ff60-4e01-abda-db35cfca8171_414x@2x.png?v=1698414156" alt="Flavor" />
-          <p class="muted">Custom and ready-to-go cakes for all occasions.</p>
+          <img src="https://baskinrobbinsindia.com/cdn/shop/files/Cakes_08fe6ba3-ff60-4e01-abda-db35cfca8171_414x@2x.png?v=1698414156">
+          <p class="muted">Premium ice cream cakes for every celebration.</p>
         </div>
+
         <div class="feature">
           <strong>Takeaway Pints</strong>
-          <img src="https://baskinrobbinsindia.com/cdn/shop/files/Variety-Pack_4c80af1b-2b50-44ae-8564-2b39d1fcf8c3_414x@2x.png?v=1698414156" alt="Flavor" />
-          <p class="muted">Grab your favorite flavors in pints for home.</p>
+          <img src="https://baskinrobbinsindia.com/cdn/shop/files/Variety-Pack_4c80af1b-2b50-44ae-8564-2b39d1fcf8c3_414x@2x.png?v=1698414156">
+          <p class="muted">Your favourite premium flavours to enjoy at home.</p>
         </div>
+
         <div class="feature">
           <strong>Milkshakes & Smoothies</strong>
-          <img src="https://baskinrobbinsindia.com/cdn/shop/files/BEVERAGE_95b0dcd1-b12e-4947-87ae-d17feaf2889b_414x@2x.png?v=1698414157" alt="Flavor" />
-          <p class="muted">Refreshing drinks made with real ice cream and fruits.</p>
+          <img src="https://baskinrobbinsindia.com/cdn/shop/files/BEVERAGE_95b0dcd1-b12e-4947-87ae-d17feaf2889b_414x@2x.png?v=1698414157">
+          <p class="muted">Smooth, refreshing drinks blended with ice cream.</p>
         </div>
+
       </div>
     </section>
 
-    <footer>
-      <div class="foot-inner">
-        <p class="muted">© 2025 Baskin Robbins Clone Project</p>
-      </div>
-    </footer>
+    <footer>© 2025 Baskin Robbins Clone Project</footer>
+
   </div>
+
 </body>
 </html>

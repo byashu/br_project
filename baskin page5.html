@@ -3,50 +3,206 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Baskin Robbins   About Us</title>
+  <title>Baskin Robbins | About Us</title>
   <link rel="stylesheet" href="style.css">
 </head>
+  <style>
+    /* Basic reset & global styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f7f7f7;
+      color: #333;
+    }
+
+    .wrap {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 0;
+      border-bottom: 1px solid #ddd;
+      position: sticky;
+      top: 0;
+      background: white;
+      z-index: 1000;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo {
+      background: #ff4d88;
+      color: #fff;
+      font-size: 22px;
+      padding: 8px 14px;
+      border-radius: 50%;
+      font-weight: bold;
+    }
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: #ff4d88;
+      font-weight: 600;
+    }
+
+    /* Sections */
+    section {
+      margin: 40px 0;
+      padding: 25px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    section h3 {
+      font-size: 26px;
+      color: #ff4d88;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    section p {
+      font-size: 16px;
+      line-height: 1.8;
+      color: #555;
+      text-align: justify;
+    }
+
+    section ul {
+      list-style-type: disc;
+      margin-left: 30px;
+      margin-top: 15px;
+    }
+
+    section ul li {
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 8px;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 30px;
+      border-top: 1px solid #ddd;
+      color: #666;
+      font-size: 14px;
+    }
+
+    /* Responsive */
+    @media(max-width:768px) {
+      header {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+      }
+
+      nav a {
+        margin: 5px 10px;
+      }
+
+      section {
+        padding: 20px;
+      }
+
+      section h3 {
+        font-size: 22px;
+      }
+
+      section p,
+      section ul li {
+        font-size: 15px;
+      }
+    }
+
+    @media(max-width:480px) {
+      section {
+        padding: 15px;
+      }
+
+      section h3 {
+        font-size: 20px;
+      }
+
+      section p,
+      section ul li {
+        font-size: 14px;
+      }
+    }
+  </style>
 <body>
+
   <div class="wrap">
+
+    <!-- Header -->
     <header>
       <div class="brand">
         <div class="logo">BR</div>
         <h1>Baskin Robbins</h1>
       </div>
+
       <nav>
         <a href="index.html">Home</a>
         <a href="page2.html">Flavors</a>
         <a href="page3.html">Menu</a>
         <a href="page4.html">Contact</a>
-        <a href="page5.html" class="cta">About</a>
+        <a href="page5.html" class="cta active">About</a>
       </nav>
     </header>
 
-    <section class="section">
+    <!-- About Section -->
+    <section>
       <h3>About Baskin Robbins</h3>
-      <p>Baskin Robbins has been serving the world with 31 flavors of ice cream since 1945. Our mission is to spread smiles and joy through handcrafted ice creams, sundaes, and cakes. We take pride in using high-quality ingredients and offering a delightful experience for every customer.</p>
+      <p>Baskin Robbins has been serving 31 flavors of ice cream since 1945. Our mission is to spread happiness through premium handcrafted ice creams, sundaes, desserts, and cakes. We believe in quality, creativity, and unforgettable taste.</p>
     </section>
 
-    <section class="section">
+    <!-- Story Section -->
+    <section>
       <h3>Our Story</h3>
-      <p>Founded by Burt Baskin and Irv Robbins, we started with one small ice cream shop. Over decades, we have expanded globally and brought innovative flavors, seasonal delights, and festive treats to ice cream lovers everywhere.</p>
+      <p>Founded by Burt Baskin & Irv Robbins, what started as a single ice cream shop has now become one of the largest dessert chains in the world. With innovation and passion, we continue introducing new flavors and exciting seasonal creations every year.</p>
     </section>
 
-    <section class="section">
+    <!-- Values Section -->
+    <section>
       <h3>Our Values</h3>
       <ul>
-        <li>Quality ingredients and craftsmanship</li>
-        <li>Customer happiness and satisfaction</li>
-        <li>Innovation and creativity in flavors</li>
-        <li>Community engagement and responsibility</li>
+        <li>High-quality ingredients</li>
+        <li>Customer satisfaction above all</li>
+        <li>Flavor innovation and creativity</li>
+        <li>Responsibility and community care</li>
       </ul>
     </section>
 
+    <!-- Footer -->
     <footer>
-      <div class="foot-inner">
-        <p class="muted">© 2025 Baskin Robbins Clone Project</p>
-      </div>
+      © 2025 Baskin Robbins — Clone Project | Designed for Learning
     </footer>
+
   </div>
+
 </body>
 </html>
